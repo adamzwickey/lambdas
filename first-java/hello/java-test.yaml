@@ -1,0 +1,14 @@
+﻿AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: My First Java app
+Resources:
+  javatest:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: 'io.pivotal.demo.Hello::myHandler'
+      Runtime: java8
+      CodeUri: .
+      Description: My First Java app
+      MemorySize: 128
+      Timeout: 15
+      Role: 'arn:aws:iam::784238359218:role/service-role/myrole'
